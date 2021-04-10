@@ -1,0 +1,11 @@
+cmake_minimum_required (VERSION 3.0)
+project(COMP_UTILS VERSION 0.0.0.1)
+set (CMAKE_CXX_STANDARD 11)
+set (CMAKE_CXX_STANDARD_REQUIRED ON)
+set (CMAKE_CXX_FLAGS "-g -O3")
+
+add_library(${PROJECT_NAME} INTERFACE)
+target_include_directories(${PROJECT_NAME} INTERFACE include)
+install(DIRECTORY ${PROJECT_SOURCE_DIR}/include DESTINATION include)
+
+add_subdirectory (test)
